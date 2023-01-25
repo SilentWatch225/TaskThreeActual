@@ -6,9 +6,11 @@ function FirstComp ({title, onPress, underColor, textColor, borderColor}){
     return(
         <TouchableHighlight
         onPress = {onPress}
-        underColor = {buttonColor}
         color = {textColor}
-        underlayColor = 
+        underlayColor = {underColor}
+
+        style = {[styles.button, {backgroundColor: borderColor}]}
+        
 
 
         </TouchableHighlight>
