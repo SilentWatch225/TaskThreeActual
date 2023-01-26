@@ -6,7 +6,7 @@ function MyButton ({title, onPress, underColor, textCol, borderColor}){
     return(
         <TouchableHighlight
         onPress = {onPress}
-        textShadowColor = {textCol}
+        color = {textCol}
         underlayColor = {underColor}
 
         style = {[styles.button, {backgroundColor: borderColor}]}>
