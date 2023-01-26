@@ -2,7 +2,7 @@ import { BackgroundColor } from 'jest-util/node_modules/chalk';
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet } from 'react-native';
 
-function FirstComp ({title, onPress, underColor, textCol, borderColor}){
+function MyButton ({title, onPress, underColor, textCol, borderColor}){
     return(
         <TouchableHighlight
         onPress = {onPress}
@@ -32,11 +32,6 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: 'bold',
     },
-
-
-
-
-
-});
+})
 
 export default MyButton;
