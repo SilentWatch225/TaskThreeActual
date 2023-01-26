@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, ScrollView } from 'react-native';
-
+import "./MyButton"
 export default function App() {
   return (
     
