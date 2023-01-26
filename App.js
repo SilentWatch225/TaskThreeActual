@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, ScrollView, Image} from 'react-native';
 import MyButton from './app/components/MyButton';
 
 export default function App() {
@@ -18,7 +18,15 @@ export default function App() {
             of the Germans informed the governments of Denmark and Norway that 
             the Wehrmacht had come to protect the countries' neutrality against 
             Franco-British aggression.</Text>
+
+            
         </TouchableHighlight>
+            <Image> 
+              style= {styles.imageStyles}
+              source={{
+                uri: 'https://picsum.photos/200'
+              }}
+            </Image>
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
@@ -34,5 +42,11 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     marginHorizontal: 20,
-  }
+  },
+  imageStyles: {
+    width:200, 
+    height:300, 
+    margin: 10,
+    borderWidth: 2,
+  },
 });
