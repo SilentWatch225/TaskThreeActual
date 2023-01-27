@@ -1,14 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, ScrollView, Image} from 'react-native';
+import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, ScrollView, Image, Button} from 'react-native';
+import colors from './app/config/colors';
 import MyButton from './app/components/MyButton';
 
 export default function App() {
   return (
-    
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style ={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <TouchableHighlight>
-          <Text>In the early morning of 9 April 1940 (Wesertag, "Weser Day"), 
+        <Text>In the early morning of 9 April 1940 (Wesertag, "Weser Day"), 
             Germany occupied Denmark and invaded Norway, ostensibly 
             as a preventive manoeuvre against a planned, and openly discussed, 
             French-British occupation of Norway known as Plan R 4 (actually 
@@ -19,34 +18,44 @@ export default function App() {
             the Wehrmacht had come to protect the countries' neutrality against 
             Franco-British aggression.</Text>
 
-            
-        </TouchableHighlight>
-            <Image> 
+            <Image 
               style= {styles.imageStyles}
               source={{
-                uri: 'https://picsum.photos/200'
+                uri: 'https://picsum.photos/100/100'
               }}
-            </Image>
+              />
+              <MyButton
+                title = "Russel"
+                onPress = {() => console.log("omega")}
+                color = 'primaryDark'
+                underColor = 'purple'
+                borderCol = 'red'
+                textCol = 'yellow'
+                backCol = 'green'
+              />
         <StatusBar style="auto" />
       </ScrollView>
-    </SafeAreaView>
+      </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.primaryLight,
     alignItems: 'center',
     justifyContent: 'center',
   },
   scrollView: {
+    backgroundColor: colors.primaryLight,
     marginHorizontal: 20,
+    marginTop: 30,
   },
   imageStyles: {
-    width:200, 
+    width:300, 
     height:300, 
     margin: 10,
-    borderWidth: 2,
+    borderColor: 'black',
+    borderWidth: 5
   },
 });
