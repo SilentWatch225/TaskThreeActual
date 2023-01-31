@@ -1,4 +1,3 @@
-import { BackgroundColor } from 'jest-util/node_modules/chalk';
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet } from 'react-native';
 
@@ -6,11 +5,11 @@ function MyButton ({title, onPress, underColor, textCol, borderCol, backCol}){
     return(
         <TouchableHighlight
         onPress = {onPress}
-        style = {[styles.text, {textColor: textCol}]}
+        style = {[styles.button, 
+        {borderColor: borderCol, backgroundColor: backCol}]}
         underlayColor = {underColor}
-        style = {[styles.button, {borderColor: borderCol}]}
-        style = {[styles.button, {backgroundColor: backCol}]}>
-        <Text style = {styles.text}> {title}</Text>
+        >
+        <Text style = {[styles.text, {color: textCol}]}> {title}</Text>
 
         </TouchableHighlight>
     );
