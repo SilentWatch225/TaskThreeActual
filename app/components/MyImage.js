@@ -1,10 +1,14 @@
 import * as React from 'react';
-import {View, StyleSheet, } from 'react-native';
+import {View, StyleSheet, Image, TouchableHighlight} from 'react-native';
 import colors from '../config/colors';
 
-function MyImage(resizeMo) {
+function MyImage({borderWid, borderCol, borderRad}) {
   return (
-    style = {[styles.imageStyles, {resizeMode: resizeMo}]}
+    <Image
+    style = {[styles.imageStyles, 
+        {borderWidth: borderWid, borderColor: borderCol, borderRadius: borderRad}]} 
+        >
+    </Image>
   );
 }
 const styles = StyleSheet.create({
@@ -12,9 +16,8 @@ const styles = StyleSheet.create({
         width:300, 
         height:300, 
         margin: 10,
-        borderColor: 'black',
-        borderWidth: 5
-      },
+    },
   })
 
 export default MyImage;
+
