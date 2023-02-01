@@ -2,20 +2,25 @@ import * as React from 'react';
 import {View, StyleSheet, Image, TouchableHighlight} from 'react-native';
 import colors from '../config/colors';
 
-function MyImage({borderWid, borderCol, borderRad}) {
+function MyImage({link, num, borderWid, borderCol, borderRad}) {
   return (
     <Image
-    style = {[styles.imageStyles, 
-        {borderWidth: borderWid, borderColor: borderCol, borderRadius: borderRad}]} 
-        >
-    </Image>
+    style = {styles.imageStyles} 
+    source = {{uri: link}}
+        />
+
   );
 }
+
+
 const styles = StyleSheet.create({
     imageStyles: {
-        width:300, 
-        height:300, 
+        width: 200, 
+        height: 200, 
         margin: 10,
+        borderColor: 'black',
+        borderWidth: 5,
+        borderRadius: 10,
     },
   })
 

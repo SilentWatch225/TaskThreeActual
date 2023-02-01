@@ -10,45 +10,71 @@ export default function App() {
   return (
     <SafeAreaView style ={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <Text style={styles.text}>In the early morning of 9 April 1940 (Wesertag, "Weser Day"), 
-            Germany occupied Denmark and invaded Norway, ostensibly 
-            as a preventive manoeuvre against a planned, and openly discussed, 
-            French-British occupation of Norway known as Plan R 4 (actually 
-            developed as a response to any German aggression against Norway). 
-            After the occupation of Denmark (the Danish military was ordered 
-            to stand down as Denmark did not declare war with Germany), envoys 
-            of the Germans informed the governments of Denmark and Norway that 
-            the Wehrmacht had come to protect the countries' neutrality against 
-            Franco-British aggression.
-          </Text>
-
-          <MyImage 
-              source={{
-                link: 'https://picsum.photos/300/300',  
-                borderCol: 'black',
-                borderWid: 5,
-                borderRad: 10,
-              }}
-              />
-          <AntDesign 
-              name="heart" 
-              size={24} 
-              color="red"
-              style={{position: 'absolute', top: 900, left: 30}} />
+          <MyImage
+          
+          link = {'https://picsum.photos/id/1015/100/100'}
+          
+          />
 
           <MyButton
                 title = "Press to Like!"
-                onPress = {() => console.log("liked")}
-                color = 'primary'
+                onPress = {() => console.log("Liked Picture 1")}
+                col = 'pink'
                 underColor = 'purple'
                 borderCol = 'primaryDark'
                 textCol = 'primaryLight'
                 backCol = 'green'
                 
               />
+
+          <MyImage
+          link = {'https://picsum.photos/id/1014/100/100'}/>
+
+          <MyButton
+                title = "Press to Like!"
+                onPress = {() => console.log("Liked Picture 2")}
+                color = 'colors.primaryLight'
+                underColor = 'orange'
+                borderCol = 'primaryDark'
+                textCol = 'primaryLight'
+                backCol = 'green'
+                
+              />
+
+<AntDesign 
+              name="heart" 
+              size={24} 
+              color="red"
+              style={{position: 'absolute', top: 240, left: 180}} />
+
+          <MyImage
+          link = {'https://picsum.photos/id/1013/100/100'}/>
+              
+          <AntDesign 
+              name="heart" 
+              size={24} 
+              color="red"
+              style={{position: 'absolute', top: 800, left: 180}} />
+
+          <MyButton
+                title = "Press to Like!"
+                onPress = {() => console.log("Liked Picture 3")}
+                color = 'primary'
+                underColor = 'teal'
+                borderCol = 'primaryDark'
+                textCol = 'primaryLight'
+                backCol = 'green'
+                
+              />
+
+<AntDesign 
+              name="heart" 
+              size={24} 
+              color="red"
+              style={{position: 'absolute', top: 520, left: 180}} />
         <StatusBar style="auto" />
       </ScrollView>
-      </SafeAreaView>
+    </SafeAreaView>
   );
 }
 

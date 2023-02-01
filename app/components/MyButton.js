@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet } from 'react-native';
 
-function MyButton ({title, onPress, underColor, textCol, borderCol, backCol}){
+function MyButton ({title, onPress, underColor, Col, borderCol, backCol}){
     return(
         <TouchableHighlight
         onPress = {onPress}
@@ -9,7 +9,7 @@ function MyButton ({title, onPress, underColor, textCol, borderCol, backCol}){
         {borderColor: borderCol, backgroundColor: backCol}]}
         underlayColor = {underColor}
         >
-        <Text style = {[styles.text, {color: textCol}]}> {title}</Text>
+        <Text style = {[styles.text, {color: Col}]}> {title}</Text>
 
         </TouchableHighlight>
     );
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     },
     text:{
         fontSize: 15,
+        color: 'black',
         fontWeight: 'bold',
     },
 })
