@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, ScrollView, Image, Button} from 'react-native';
 import colors from './app/config/colors';
 import MyButton from './app/components/MyButton';
+import { AntDesign } from '@expo/vector-icons'; 
+
 
 export default function App() {
   return (
@@ -21,17 +23,25 @@ export default function App() {
             <Image 
               style= {styles.imageStyles}
               source={{
-                uri: 'https://picsum.photos/100/100'
+                uri: 'https://picsum.photos/100/100',  
+                resizeMode: "contain"
               }}
               />
+              <AntDesign 
+              name="heart" 
+              size={24} 
+              color="red"
+              style={{position: 'absolute', top:250, left: 50}} />
+
               <MyButton
-                title = "Russel"
-                onPress = {() => console.log("omega")}
-                color = 'primaryDark'
+                title = "Press to Like!"
+                onPress = {() => console.log("liked")}
+                color = 'primary'
                 underColor = 'purple'
-                borderCol = 'red'
-                textCol = 'yellow'
+                borderCol = 'primaryDark'
+                textCol = 'primaryLight'
                 backCol = 'green'
+                
               />
         <StatusBar style="auto" />
       </ScrollView>
