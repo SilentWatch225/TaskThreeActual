@@ -11,7 +11,7 @@ function MyRoundIcon({borderRad, borderWid, borderCol}) {
         style = {styles.iconStyle}
         borderRadius = {borderRad}
         borderWidth = {borderWid}
-        borderCol = {borderCol}
+        borderColor = {borderCol}
         >
             <AntDesign
                 name="heart" 
