@@ -1,15 +1,18 @@
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet } from 'react-native';
 
-function MyButton ({title, onPress, underColor, Col, borderCol, backCol}){
+function MyButton ({title, onPress, underColor, borderCol, backCol}){
     return(
         <TouchableHighlight
-        onPress = {onPress}
-        style = {[styles.button, 
-        {borderColor: borderCol, backgroundColor: backCol}]}
-        underlayColor = {underColor}
+            onPress = {onPress}
+            style = {[styles.button]}
+            underlayColor = {underColor}
+            borderColor = {borderCol}
+            backgroundColor = {backCol}
         >
-        <Text style = {[styles.text, {color: Col}]}> {title}</Text>
+            <Text 
+                style = {[styles.text]}> {title}
+            </Text>
 
         </TouchableHighlight>
     );
